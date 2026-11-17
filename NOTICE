@@ -1,0 +1,33 @@
+Herdr Glass, a layout for the Herdr app
+Copyright (c) 2026 Noah Chen
+
+Herdr Glass's own work is under the MIT License (LICENSE): the Appearance dialog
+(mods/herdr-glass-bg), the background pictures, the theme, the install script and
+the documents.
+
+These parts are derived from the Herdr app (https://github.com/herdrdev/herdr-app,
+defaults/), which is licensed under the Apache License 2.0 (licenses/Herdr-Apache-2.0.txt):
+
+- layouts/herdr-glass.json, from Herdr's `main` layout (0.1.16): restyled as glass cards,
+  with a background picture, its own theme and notifications mod.
+- mods/herdr-glass-tabs, from `tabs` (0.1.16): no bottom border; the sidebar's
+  spacing.
+- mods/herdr-glass-pane, from `pane` (0.1.16): the header's content further in.
+- mods/herdr-glass-chrome, from `workspace-chrome` (0.1.16): an Appearance row in the
+  footer; on the macOS rail, the fold button under the traffic lights.
+- mods/herdr-glass-spaces, from `spaces` (0.1.16): no letter avatars.
+- mods/herdr-glass-agents, from `agents` (0.1.16): grouped by space by default, the fold
+  chevron after the group's name, no unfold button on the rail.
+- mods/herdr-glass-status, from `workspace-status` (0.1.16): no top border line; text
+  further in.
+- mods/herdr-glass-toast, from `toast` (0.1.16): a colour bar by level, the agent's live
+  title in the body.
+
+Each of those mods' main.js starts with a note of what was changed.
+
+The icons in mods/herdr-glass-chrome, mods/herdr-glass-tabs and mods/herdr-glass-pane
+are from Lucide
+(https://lucide.dev), ISC License, most of them as shipped with Herdr's mods. The
+full notice is in licenses/Lucide-ISC.txt.
+
+Herdr Glass is a community layout, not affiliated with or endorsed by Herdr.
