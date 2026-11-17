@@ -32,7 +32,7 @@ Version 0.1.0, built on herdr-app 0.1.16. What changed in each version is in
 Ask your agent, from a terminal in Herdr:
 
 ```
-Read ~/.config/herdr-app/AGENTS.md, then add this layout: herdr.dev/layouts/noah4520/herdr-glass
+Read ~/.config/herdr-app/AGENTS.md, then add this layout: https://github.com/noah4520/herdr-glass
 ```
 
 It reads every file before adding the layout, its theme (`themes/herdr-glass.json`) and its
