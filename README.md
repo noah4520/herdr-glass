@@ -7,7 +7,7 @@ restyles Herdr's own window and adds no panels of its own.
 
 ![Herdr Glass](preview.png)
 
-Version 0.1.0, built on herdr-app 0.1.16. What changed in each version is in
+Version 0.1.1, built on herdr-app 0.1.18. What changed in each version is in
 [CHANGELOG.md](CHANGELOG.md).
 
 ## Features
@@ -53,7 +53,7 @@ is: `ctrl-shift-l` switches between layouts.
 **What it needs**
 
 - The Herdr app, opened at least once. Herdr Glass is built and tested on herdr-app
-  0.1.16,
+  0.1.18,
   on macOS. Linux should work but is untested; Windows isn't supported (Appearance
   runs `sh`).
 - Optional: MesloLGM Nerd Font Mono for the terminals
@@ -116,7 +116,7 @@ want them.
 | `RECIPE.md` | The brief an agent can install or rebuild Herdr Glass from |
 
 The seven mods from `herdr-glass-tabs` to `herdr-glass-toast` are `mod.clone` copies of
-Herdr's own mods (0.1.16) with small changes, so they don't follow Herdr updates. The
+Herdr's own mods (0.1.18) with small changes, so they don't follow Herdr updates. The
 Components switch in Appearance puts Spaces, Agents, pane headers and notifications back
 on Herdr's versions at any time; the tab bar, sidebar rows and status bar stay Herdr
 Glass's.

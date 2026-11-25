@@ -4,8 +4,8 @@ A dark frosted-glass window for Herdr. Every region is a translucent rounded car
 floating over a soft background picture, with the terminal on a Ghostty-style neutral
 dark. Agents are grouped by space, and an Appearance dialog changes the picture, how
 see-through the glass is, and whether the sidebar lists are restyled or Herdr's own. It
-restyles Herdr's window and adds no panels of its own. Herdr Glass 0.1.0, built on
-herdr-app 0.1.16.
+restyles Herdr's window and adds no panels of its own. Herdr Glass 0.1.1, built on
+herdr-app 0.1.18.
 
 ![Herdr Glass](preview.png)
 
@@ -91,13 +91,13 @@ sits 8px from the card's edge with an 8px radius, and text and icons start 16px 
 
 ## Built from
 
-- `layouts/herdr-glass.json`: cloned from Herdr `main` 0.1.16. Root: `titlebar: none`,
+- `layouts/herdr-glass.json`: cloned from Herdr `main` 0.1.18. Root: `titlebar: none`,
   `traffic_lights [24, 26]`, `toast: herdr-glass-toast`, `theme: herdr-glass`, `colors` overrides
   (`canvas`/`chrome`/`background` transparent so the cards and gradient show),
   `terminal_opacity: 0` (the rounded pane frame paints the dark, not the square terminal),
   `padding 10`, `gap 10`, `preview: layouts/herdr-glass.svg`.
 - `themes/herdr-glass.json`: the layout's own theme (Ghostty default colors).
-- Mods (`mod.clone` copies of Herdr's 0.1.16, except `herdr-glass-bg`):
+- Mods (`mod.clone` copies of Herdr's 0.1.18, except `herdr-glass-bg`):
   - `herdr-glass-tabs` (from `tabs`): drops the bar's bottom border and uses the
     spacing above (8px edge padding, 26px pills with an 8px radius). When its block has
     blocks after it in its row, it leaves them the right edge and ends with a 3px gap.
