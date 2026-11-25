@@ -1,4 +1,4 @@
-// glass: a clone of Herdr's `pane` mod 0.1.16 (Apache-2.0, see NOTICE), changed for Herdr Glass:
+// glass: a clone of Herdr's `pane` mod 0.1.18 (Apache-2.0, see NOTICE), changed for Herdr Glass:
 // the header's content sits 16px from the pane's rounded edge instead of 10px.
 // A pane's header, for layouts that frame their panes:
 //   { "tab": "active", "pane": { "header": { "content": { "mod": "herdr-glass-pane" } } } }
@@ -62,7 +62,7 @@ export default class Pane extends View {
     const t = theme();
     const p = this.me();
     if (!p) return div();
-    const name = ((p.program?.agent || p.program?.shell) && p.program.name) || p.title || p.program?.name || "shell";
+    const name = p.name || ((p.program?.agent || p.program?.shell) && p.program.name) || p.title || p.program?.name || "shell";
     const pic = icon(p.program, 14, t.dim);
     const st = p.status;
     const pane = p.pane;

@@ -1,4 +1,4 @@
-// glass: a clone of Herdr's `workspace-status` mod 0.1.16 (Apache-2.0, see NOTICE), changed
+// glass: a clone of Herdr's `workspace-status` mod 0.1.18 (Apache-2.0, see NOTICE), changed
 // for Herdr Glass: no top border line, since the bar sits in a glass card with its own border,
 // and its text sits 16px in, like the sidebar's labels.
 // (A theme `colors` override on the block didn't reach the mod, hence the clone.)
@@ -27,8 +27,8 @@ export default class WorkspaceStatus extends View {
     return h_flex().size_full().px(16).gap(16).items_center().bg(t.chrome).text_size(11.8).text_color(t.muted)
       .child(label(space?.machine ? "server" : "monitor", space?.machine ?? "This computer"))
       .when(Boolean(space?.branch), el => el.child(label("branch", space.branch)))
-      .child(h_flex().gap(6).items_center().child(div().size(6).rounded(3).bg(t.dim)).child(`${list.length} agents`)
-        .when(needs > 0, el => el.child(div().text_color(t.blocked).child(`· ${needs} needs you`))))
+      .child(h_flex().gap(6).items_center().child(div().size(6).rounded(3).bg(t.dim)).child(`${list.length} ${list.length === 1 ? "agent" : "agents"}`)
+        .when(needs > 0, el => el.child(div().text_color(t.blocked).child(`· ${needs} ${needs === 1 ? "needs" : "need"} you`))))
       .child(div().flex_1())
       .child(div().id("palette").text_color(t.dim).on_click(() => run("app.palette")).child(this.hint(t)));
   }

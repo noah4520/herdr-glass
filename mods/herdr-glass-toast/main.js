@@ -1,4 +1,4 @@
-// glass: a clone of Herdr's `toast` mod 0.1.16 (Apache-2.0, see NOTICE), changed for Herdr Glass:
+// glass: a clone of Herdr's `toast` mod 0.1.18 (Apache-2.0, see NOTICE), changed for Herdr Glass:
 // a colour bar by level, and an agent's live title in the body.
 // Notifications for the glass layout. Herdr's body for an agent is "<space> / <tab name>",
 // and an unnamed tab is called "1", so name the agent by its live title instead,
@@ -34,9 +34,14 @@ export default class Toast extends View {
     const command = login ? `hc machine login ${login[1]}` : null;
     const color = t[COLOR[p.level] ?? "accent"];
     const body = login ? null : agentBody(p) ?? p.body ?? "";
+    // Herdr 0.1.17+: a fitHeight toast grows to show every line; otherwise one line each.
+    const text = (value) => p.fitHeight
+      ? div().child(value)
+      : div().truncate().child(typeof value === "string" ? value.split("\n", 1)[0] : value);
     return h_flex()
       .id("toast")
-      .size_full()
+      .when(p.fitHeight, (el) => el.w_full().min_h(70).flex_none().py(12))
+      .when(!p.fitHeight, (el) => el.size_full())
       .pl(14)
       .pr(18)
       .gap(12)
@@ -55,8 +60,8 @@ export default class Toast extends View {
           .flex_1()
           .min_w(0)
           .gap(2)
-          .child(div().truncate().font_semibold().text_size(13).text_color(t.foreground).child(login ? `${login[1]} needs a login: run` : p.title ?? ""))
-          .when(Boolean(body), (el) => el.child(div().truncate().text_size(12).text_color(t.muted).child(body)))
+          .child(text(login ? `${login[1]} needs a login: run` : p.title ?? "").font_semibold().text_size(13).text_color(t.foreground))
+          .when(Boolean(body), (el) => el.child(text(body).text_size(12).text_color(t.muted)))
           .when(Boolean(login), (el) => el.child(h_flex().gap(8).items_center()
             .child(div().flex_1().min_w(0).truncate().tooltip(command).text_size(12).text_color(t.muted).child(command))
             .child(div().id("toast-login-copy").flex_none().px(6).py(3).rounded(4).bg(t.raised)

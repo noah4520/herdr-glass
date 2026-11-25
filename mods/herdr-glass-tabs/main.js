@@ -1,4 +1,4 @@
-// glass: a clone of Herdr's `tabs` mod 0.1.16 (Apache-2.0, see NOTICE), changed for Herdr Glass:
+// glass: a clone of Herdr's `tabs` mod 0.1.18 (Apache-2.0, see NOTICE), changed for Herdr Glass:
 // no bottom border, since the bar sits in a glass card with its own border, and the
 // sidebar's spacing: tab pills 8px from the card's edge with an 8px radius, 26px high like
 // the panel buttons. Blocks after it in its row (a mod's own panel button) get the edge.

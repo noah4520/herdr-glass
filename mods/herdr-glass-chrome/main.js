@@ -1,4 +1,4 @@
-// glass: a clone of Herdr's `workspace-chrome` mod 0.1.16 (Apache-2.0, see NOTICE), changed
+// glass: a clone of Herdr's `workspace-chrome` mod 0.1.18 (Apache-2.0, see NOTICE), changed
 // for Herdr Glass: an Appearance row in the footer, and on the macOS rail a taller brand block
 // with the fold button under the traffic lights.
 import { View, div, image, svg } from "gpui-kit";
