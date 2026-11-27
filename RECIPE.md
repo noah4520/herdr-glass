@@ -1,7 +1,7 @@
 # Herdr Glass
 
 A dark frosted-glass window for Herdr. Every region is a translucent rounded card
-floating over a soft background picture, with the terminal on a Ghostty-style neutral
+floating over a soft background picture, with the terminal on a neutral
 dark. Agents are grouped by space, and an Appearance dialog changes the picture, how
 see-through the glass is, and whether the sidebar lists are restyled or Herdr's own. It
 restyles Herdr's window and adds no panels of its own. Herdr Glass 0.1.1, built on
@@ -45,7 +45,7 @@ sits 8px from the card's edge with an 8px radius, and text and icons start 16px 
   `#1c1e24` with soft warm blobs.
 - **Type**: terminals in MesloLGM Nerd Font Mono 14, weight 400, line height 1.12
   (falls back to JetBrains Mono if the font isn't installed); UI in Geist.
-- **Colors**: theme `herdr-glass` (Ghostty's defaults: background `#282c34`, Tomorrow Night
+- **Colors**: theme `herdr-glass` (a neutral dark: background `#282c34`, the Tomorrow Night
   ANSI palette, foreground `#d2d4d8`); accent `#81a2be`; done `#8cc27d`; popover
   `#1a1c22eb`, so the command palette, menus and dialogs match the dark glass cards;
   surface `#24272ef7` (near-opaque), because gpui-kit draws every tooltip in `surface`.
@@ -96,7 +96,7 @@ sits 8px from the card's edge with an 8px radius, and text and icons start 16px 
   (`canvas`/`chrome`/`background` transparent so the cards and gradient show),
   `terminal_opacity: 0` (the rounded pane frame paints the dark, not the square terminal),
   `padding 10`, `gap 10`, `preview: layouts/herdr-glass.svg`.
-- `themes/herdr-glass.json`: the layout's own theme (Ghostty default colors).
+- `themes/herdr-glass.json`: the layout's own theme (a neutral dark with the Tomorrow Night palette).
 - Mods (`mod.clone` copies of Herdr's 0.1.18, except `herdr-glass-bg`):
   - `herdr-glass-tabs` (from `tabs`): drops the bar's bottom border and uses the
     spacing above (8px edge padding, 26px pills with an 8px radius). When its block has

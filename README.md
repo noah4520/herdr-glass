@@ -1,7 +1,7 @@
 # Herdr Glass
 
 A dark frosted-glass layout for the [Herdr](https://herdr.dev) desktop app: translucent
-rounded cards over a soft background picture, a Ghostty-coloured terminal, agents grouped
+rounded cards over a soft background picture, a neutral dark terminal, agents grouped
 by space, and an Appearance dialog for the picture and how see-through the glass is. It
 restyles Herdr's own window and adds no panels of its own.
 
@@ -104,7 +104,7 @@ want them.
 |---|---|
 | `layouts/herdr-glass.json` | The layout, from Herdr's `main` |
 | `layouts/herdr-glass.svg` | Its picture in Herdr's settings |
-| `themes/herdr-glass.json` | The layout's theme (Ghostty's default colours) |
+| `themes/herdr-glass.json` | The layout's theme (a neutral dark with the Tomorrow Night palette) |
 | `mods/herdr-glass-tabs` | Tab bar without its bottom line, on the sidebar's spacing |
 | `mods/herdr-glass-chrome` | Sidebar top and footer rows: fold button, Appearance entry |
 | `mods/herdr-glass-spaces` | Spaces list without the letter avatars |
